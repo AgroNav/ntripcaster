@@ -1,9 +1,6 @@
-************************
-* Standard NtripCaster *
-************************
+# NtripCaster
 
-Introduction
-~~~~~~~~~~~~
+## Introduction (original from forked repo - keep for reference)
 
 The Standard NtripCaster is a software written in C Programming
 Language for disseminating GNSS real-time data streams via Internet.
@@ -30,10 +27,10 @@ Standard NtripCaster supports a maximum of 50 NtripServers and
 100 NtripClients simultaneously,
 see http://igs.ifag.de/pdf/NtripImplementation.pdf for technical
 details.
- 
+
 Ntrip Version 1.0 is an RTCM standard for streaming GNSS data over
 the Internet. Offering the Standard NtripCaster Version 0.1.5 is
-part of BKG’s policy to help distributing this standard. RTCM may
+part of BKG's policy to help distributing this standard. RTCM may
 decide to issue further Ntrip versions as the need arises. Thus,
 it might be necessary to modify the Standard NtripCaster
 Version 0.1.5 in the future. Ntrip is already part of some GNSS
@@ -49,7 +46,7 @@ Following your installation, we would appreciate if you could
 inform us about the IP address of your Standard NtripCaster. We
 intend to keep track of the upcoming global NtripCaster network,
 which allows linking them through appropriate entries in the
-corresponding configuration files. 
+corresponding configuration files.
 
 Note that the BKG does not give any warranty regarding the
 function of the Standard NtripCaster Version 0.1.5. Moreover,
@@ -60,20 +57,37 @@ NtripCaster Version 0.1.5.
 
 Please note that due to limited resource we are not able to
 give any support concerning installation and maintanance of the
-software. 
+software.
 
-----------New Feature------------
+## New Feature (original from forked repo - keep for reference)
+
 in this new version, some new functions are supported. It includes
 supporting Ntrip V2.0 and changing mountpoint for client automatically.
 
-Installation
-~~~~~~~~~~~~
+## [AgroNAV] Installation (via docker - preffered approach)
+
+1. Build docker image
+
+```
+$ ./build-docker.sh
+```
+
+2. Start container (for additional information see options description in docker docs)
+
+```
+$ ./run-docker.sh
+```
+
+3. To stop the container, find it on the list of running containers `docker ps` and stop it with `docker stop <container_name>`
+
+## Installation (original from forked repo - keep for reference)
+
 To install the NtripCaster do the following:
 - unzip the software in a separate directory
-- run "./configure" (if you do not want the server to be installed in
-"/usr/local/ntripcaster" specify the desired path with "./configure --prefix=<path>")
-- run "make"
-- run "make install"
+- run `./configure` (if you do not want the server to be installed in
+`/usr/local/ntripcaster` specify the desired path with `./configure --prefix=<path>`)
+- run `make`
+- run `make install`
 
 After that, the server files will be in "/usr/local/ntripcaster", binaries will
 be in "/usr/local/ntripcaster/bin", configuration files in
@@ -89,14 +103,15 @@ you have to specify the name of the machine the server is running on
 (no IP adress!!) and you can adapt other settings, like the listening ports,
 the server limits and the access control.
 
-----Changing mountpoint automatically----
+## Changing mountpoint automatically (original from forked repo - keep for reference)
+
 If you want to use auto-change mount_point function, then
-go to configuration directory and rename "mountpos.conf.dist" to 
-"mountpos.conf". If you add a new station, you should add an item as the 
-mode "/mount_point:latitude, longitude, height" just like the example 
+go to configuration directory and rename "mountpos.conf.dist" to
+"mountpos.conf". If you add a new station, you should add an item as the
+mode "/mount_point:latitude, longitude, height" just like the example
 in mountpos.conf.dist. After modifying the "mountpos.conf.dist" file, then
 edit "ntripcaster.conf", specify the absolute path of "mountpos.conf", and then
-change "auto_mount false" to "auto_mount true". Now you can use auto-change 
+change "auto_mount false" to "auto_mount true". Now you can use auto-change
 mount_point function
 
 Now the server is ready to be run with "./ntripcaster" in the binary directory.
@@ -107,10 +122,16 @@ to include the following line in that configuration file:
 CAS;rtcm-ntrip.org;2101;NtripInfoCaster;BKG;0;DEU;50.12;8.69;http://www.rtcm-ntrip.org/home
 
 
-License
-~~~~~~~
+## Testing
+
+```
+$ curl -i -H "Authorization: Basic bWFyZWs6cGFzc3dvcmQ=" -H "User-Agent: NTRIP AgroNav" -H "Accept: */*" -H "Connection: close" -X GET localhost:8000/WROC1
+```
+
+## License (original from forked repo - keep for reference)
+
 NtripCaster, a GNSS real-time data server
-Copyright (C) 2004-2008 
+Copyright (C) 2004-2008
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -127,8 +148,8 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA
 
 
-Contact and webpage
-~~~~~~~~~~~~~~~~~~~~
+## Contact and webpage (original from forked repo - keep for reference)
+
 The main webpage for Ntripcaster is "http://igs.bkg.bund.de/index_ntrip.htm".
 
 27 February 2008, "euref-ip@bkg.bund.de".

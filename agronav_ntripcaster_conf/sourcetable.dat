@@ -1,0 +1,10 @@
+CAS;www.euref-ip.net;2101;EUREF-IP;BKG;0;DEU;50.12;8.69;http://www.euref-ip.net/home
+CAS;rtcm-ntrip.org;2101;NtripInfoCaster;BKG;0;DEU;50.12;8.69;http://www.rtcm-ntrip.org/home
+NET;EUREF;EUREF;B;N;http://www.epncb.oma.be/euref_IP;http://www.epncb.oma.be/euref_IP;http://igs.ifag.de/index_ntrip_reg.htm;none
+NET;IGS;BKG;B;N;http://igscb.jpl.nasa.gov/;none;http://igs.ifag.de/index_ntrip_reg.htm;none
+STR;GAVL0;Gavle;RTCM 2.3;1(1),3(19),16(59);0;GPS+GLO;Misc;SWE;60.67;17.14;0;0;Javad Legacy;none;B;N;800;National Land Survey Sweden
+STR;PADO0;Padova;RTCM 2.1;1(1),3(10),16(30),18(1),19(1),59;2;GPS;IGS;ITA;45.41;11.90;0;0;Trimble 4000SSI;none;B;N;3600;Univ Padova
+STR;WROMF;Dupa;RTCM 2.1;1(1),3(10),16(30),18(1),19(1),59;2;GPS;IGS;ITA;45.41;11.90;0;0;Trimble 4000SSI;none;B;N;3600;WROCLAW
+STR;WROC0;WrocObor;RTCM 2.1;1(1),3(10),16(30),18(1),19(1),59;2;GPS;IGS;ITA;45.41;11.90;0;0;Trimble 4000SSI;none;B;N;3600;Wroclaw Obornicka
+STR;WROC1;WrocSzybow;RTCM 2.1;1(1),3(10),16(30),18(1),19(1),59;2;GPS;IGS;ITA;45.41;11.90;0;0;Trimble 4000SSI;none;B;N;3600;Wroclaw Szybowcowa
+STR;BUCU0;Bucharest;RTCM 2.0;1(1),3(60),16(60);0;GPS;EUREF;ROU;44.46;26.12;0;0;Ashtech Z-XII3;none;B;N;520;TU Bucharest
