@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+  ntripcaster:
+    image: ubuntu:latest
+    command: bash -c "apt-get update && apt-get install -y g++ make && ./configure && make install && cd /usr/local/ntripcaster/bin && ./ntripcaster"
+    ports:
+      - 8000:8000
+    working_dir: /app
+    volumes:
+       - ./:/app
+       - ./conf_example:/usr/local/ntripcaster/conf

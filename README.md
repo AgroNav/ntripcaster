@@ -33,7 +33,7 @@ details.
  
 Ntrip Version 1.0 is an RTCM standard for streaming GNSS data over
 the Internet. Offering the Standard NtripCaster Version 0.1.5 is
-part of BKG’s policy to help distributing this standard. RTCM may
+part of BKGï¿½s policy to help distributing this standard. RTCM may
 decide to issue further Ntrip versions as the need arises. Thus,
 it might be necessary to modify the Standard NtripCaster
 Version 0.1.5 in the future. Ntrip is already part of some GNSS
@@ -106,6 +106,11 @@ Whatever the content of your "sourcetable.dat" finally might be, it is recommend
 to include the following line in that configuration file:
 CAS;rtcm-ntrip.org;2101;NtripInfoCaster;BKG;0;DEU;50.12;8.69;http://www.rtcm-ntrip.org/home
 
+
+Testing
+~~~~~~~
+
+curl -i -H "Authorization: Basic bWFyZWs6cGFzc3dvcmQ=" -H "User-Agent: NTRIP AgroNav" -H "Accept: */*" -H "Connection: close" -X GET localhost:8000/WROC1
 
 License
 ~~~~~~~
