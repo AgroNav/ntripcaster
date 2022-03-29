@@ -66,7 +66,7 @@ supporting Ntrip V2.0 and changing mountpoint for client automatically.
 
 ## [AgroNAV] Installation (via docker - preffered approach)
 
-1. Build docker image
+1. Build docker image (*note: when building on the Agronav server please make sure there are no iptables rules blocking connectivity over the eth0 interface - see https://op.agronav.pl/projects/agronav-sw/wiki/agronav-server*)
 
 ```
 $ ./build-docker.sh
