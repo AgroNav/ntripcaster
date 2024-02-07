@@ -33,6 +33,6 @@ done
 
 cd ./$NTRIP_CONF_DIR || { echo "ERROR: run $0 in ntripcaster software home dir..."; exit 1; }
 
-docker run -dp "$HOSTPORT":$CONTAINERPORT ${RESTART_ALWAYS} -v "$(pwd):/usr/local/ntripcaster/conf" ntripcaster
+docker run -dp "$HOSTPORT":$CONTAINERPORT ${RESTART_ALWAYS} -v "/etc/localtime:/etc/localtime:ro" -v "$(pwd):/usr/local/ntripcaster/conf" ntripcaster
 
 cd - || exit
